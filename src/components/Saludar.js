@@ -4,7 +4,7 @@ import React from "react";
 export default function Saludar(props) {
     // Asignacion por destructuring
     const { userInfo, saludarFn } = props
-    const { nombre = "Anonimo" } = userInfo
+    const { nombre = "Anonimo", edad = "anonimo" } = userInfo
     //
     console.log(props)
 
@@ -12,7 +12,7 @@ export default function Saludar(props) {
 
     return(
         <div>
-           <button onClick={() => saludarFn(nombre)}>
+           <button onClick={() => saludarFn(nombre, edad)}>
             Saludar
             </button>
         </div>
