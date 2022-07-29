@@ -6,14 +6,18 @@ import Saludar from './components/Saludar';
 
 //uso basico de props
 function App() {
+  
+  const user = {
+    nombre: "David",
+    age: 21,
+    color: "Azul"
+  }
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <HolaMundo /> 
-        <AdiosMundo />
-        <Saludar name = "David Serrano" age = "26" /> 
-        <Saludar name = "Tony" age = "15" />
+        <Saludar userInfo = {user} /> 
+        
       </header>
     </div>
   );
